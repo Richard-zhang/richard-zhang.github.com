@@ -67,6 +67,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Hack-C-by-myself-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/20/Hack-C-by-myself-1/" class="article-date">
+  <time datetime="2015-01-20T09:11:52.000Z" itemprop="datePublished">Jan 20 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/20/Hack-C-by-myself-1/">Hack C++ by myself(1)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Problem: <a href="http://ti.jisuanke.com/problem/6" target="_blank" rel="external">泥塑课</a></p>
+<ul>
+<li>Good data structure will make your answer easily.</li>
+<li>When a question talk about stroing a certain amount of data, and compare, use <em>for loop</em> and <em>data structure</em></li>
+<li>How to deal different type of input data?</li>
+<li>What is some basic operation of map and waht are some special feature of map?</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;string&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;map&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> main() {</div><div class="line">    <span class="keyword">int</span> l,w,h,n;</div><div class="line">    <span class="keyword">char</span> ch[<span class="number">10</span>];<span class="comment">//way to store a string</span></div><div class="line">    <span class="stl_container"><span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="built_in">string</span>&gt;</span>mp;</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &n)!=EOF, n!=-<span class="number">1</span>) { <span class="comment">//scanf return the number of input items  successfully  matched</span></div><div class="line">       and assigned</div><div class="line">        mp.clear(); <span class="comment">//clean everything in map</span></div><div class="line"></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i &lt; n; i++) {</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &l, &w, &h, ch);</div><div class="line">            mp[l*w*h] = (<span class="built_in">string</span>)ch;<span class="comment">//way to construct map quickly mp[x]= (string&lt;int, int&gt;){1,3} will work</span></div><div class="line">        }</div><div class="line">         <span class="built_in">printf</span>(<span class="string">"%s took clay from %s.\n"</span>,(mp.rbegin()-&gt;second).c_str(),(mp.begin()-&gt;second).c_str());</div><div class="line">         <span class="comment">//rbegin() is used to return address of the last element of a container</span></div><div class="line">         <span class="comment">//-&gt;second is to pointed to second element of a map list</span></div><div class="line">         <span class="comment">//c_str() is used to convert a C++ string to C string(char Mystring[20])</span></div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>reference:<br><a href="https://stackoverflow.com/questions/7416445/what-is-use-of-c-str-function-in-c" target="_blank" rel="external">What is the use of C_str function in C++</a><br><a href="http://blog.sina.com.cn/s/blog_676070110100l3ez.html" target="_blank" rel="external">POJ1547 MAP</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/01/20/Hack-C-by-myself-1/" data-id="r06t3i34pna6260o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hack-C-by-myself/">Hack C++ by myself</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Hack C++ by myself(0)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/01/19/Hack C++ by myself(0)/" class="article-date">
@@ -120,7 +168,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hack-C-by-myself/">Hack C++ by myself</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hack-C-by-myself/">Hack C++ by myself</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -138,7 +186,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -148,6 +196,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/01/20/Hack-C-by-myself-1/">Hack C++ by myself(1)</a>
+          </li>
         
           <li>
             <a href="/2015/01/19/Hack C++ by myself(0)/">Hack C++ by myself(0)</a>
